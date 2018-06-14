@@ -1,0 +1,61 @@
+一、安装Git
+	
+	1、到Git的官网上去下载相应环境的Git安装文件
+
+	2、安装成功的话，在桌面右击会看到 “ Git GUI Here ” 和 “ Git Bash Here ”
+
+二、Git配置及生成密钥
+	
+	1、开始菜单 ——> 在搜索框中输入cmd回车 ——> 打开cmd命令 ——> 找到工作目录，运行一下命令
+
+			1.1、git config --global user.name "username"    (username是你自己的用户名)
+
+			1.2、git config --global user,email "username@email.com"    (username@email.com是你自己的邮箱)
+
+	2、查看配置————git config -l
+
+	3、设置 “ push.default ” 参数————git config --global push.default matching
+
+			1.1、matching (匹配所有分支)
+
+				matching 参数是 Git 1.x 的默认参数，也就是老的执行方式。其意是如果你执行 git push 但没有指定分支，它将 push 所有你本地的分支到远程仓库中对应匹配的分支。
+
+			1.2、simple（匹配单个分支）
+
+				simple参数是 Git 2.x 默认参数，意思是执行 git push 没有指定分支时，只有当前分支会被 push 到远程仓库。
+
+	4、生成密钥
+
+			1.1、到Git安装目录下，找到 “ git-bash.vbs ” 运行并执行一下命令————ssh-keygen -t rsa
+
+			1.2、出现 “ Enter file in which to save the key (/c/Users/落雁/.ssh/id_rsa): ” 输入 “ mu ” 回车
+
+			1.3 出现 “ Overwrite (y/n)? ” 输入 “ y ” 回车
+
+			1.4、连续按两次回车
+
+三、将密钥放到GitHub中
+
+		1、到c:\User\落雁[你的电脑的用户名]\.ssh下找known_hosts并打开，复制其中从ssh-rsa开始的所有内容
+
+		2、登录GitHub，setting -> SSH and GPG keys -> New SSH key -> 粘贴到key中 -> 在结尾处写上你的邮箱号 -> Add SSH key
+
+四、在Sublime Text3中安装Git插件
+
+		1、按下 Ctrl+Shift+P -> 输入 Package Control:Install Packsge -> 输入 Git 回车
+
+		2、Prefernces（首选项）-> Package settings -> Git -> setting-Default 复制其中的内容
+
+		3、Prefernces（首选项）-> Package settings -> Git -> setting-User 粘贴之前复制的内容，修改 “ git_command: false ” 为 “ git_command: E:/nodeJs/GitHub/Git/Git/bin/git.exe ” 这个目录依据本地Git的安装目录
+
+五、使用Git
+
+	1、Git:init  [初始化git环境]
+
+	2、Git:add   [添加新增或修改的文件]
+
+	3、Git:commit    [提交文件]
+
+	
+
+
