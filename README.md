@@ -1,0 +1,2 @@
+# Sublime-Text3-GitHub
+在Sublime Text3中安装Git可以通过Git的指令将sublime中对应的文件保存到GitHub本地，再通过本地的GitHUb传到网上的GitHub中
